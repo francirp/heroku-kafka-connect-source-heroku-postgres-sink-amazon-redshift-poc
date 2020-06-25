@@ -5,6 +5,7 @@ confluent-kafka-2.11
 confluent-schema-registry
 confluent-kafka-connect-jdbc
 confluent-kafka-connect-s3
+confluent-kafka-connect-salesforce
 nginx
 apache2-utils
 curl

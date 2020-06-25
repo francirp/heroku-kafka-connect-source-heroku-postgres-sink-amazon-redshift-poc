@@ -1,10 +1,14 @@
 {
-    "name": "redshift-sink",
+    "name" : "salesforce-sink",
     "config": {
-      "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+      "connector.class" : "io.confluent.salesforce.SalesforceSObjectSinkConnector",
       "tasks.max": "1",
       "topics": "connect_demo",
-      "connection.url": "jdbc:redshift://<Redshift-Host>:5439/<Redshift-Database>?user=<Redshift-UserName>&password=<Redshift-Password>",
+      "salesforce.consumer.key" : "CONSUMER-KEY",
+      "salesforce.consumer.secret" : "CONSUMER-SECRET",
+      "salesforce.object" : "Lead",
+      "salesforce.sink.object.operation": "upsert",
+      "override.event.type": "true",
       "auto.create": "false"
     }
 }
